@@ -22,7 +22,7 @@
     }];
     let idCount = cartItems.length;
 
-        cart.get("/cart-items",(req,res)=>{
+        cart.get("/cart-items/all",(req,res)=>{
         console.log("GET");
         res.send(cartItems);
     });

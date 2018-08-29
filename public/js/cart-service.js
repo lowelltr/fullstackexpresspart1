@@ -3,7 +3,7 @@ function CartService($http) {
   const vm = this;
   vm.get = () => {
     return $http({
-      url: "/cart-items",
+      url: "/cart-items/all",
       method: "GET"
     }).then((response) => {
       vm.cartItems = response.data;
