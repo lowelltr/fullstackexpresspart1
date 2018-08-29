@@ -1,6 +1,7 @@
     "use strict";
     const express = require("express");
     const cart = express.Router();
+    
     const cartItems=[
         {
             id:1,
@@ -22,7 +23,7 @@
     }];
     let idCount = cartItems.length;
 
-        cart.get("/cart-items/all",(req,res)=>{
+        cart.get("/cart-items",(req,res)=>{
         console.log("GET");
         res.send(cartItems);
     });
@@ -69,4 +70,4 @@
         res.send(cartItems);
     });
 
-    module.exports = cartItems;
+    module.exports = cart;
