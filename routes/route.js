@@ -28,46 +28,49 @@
         res.send(cartItems);
     });
     cart.post("/cart-items",(req,res)=>{
-            cartItems.push({
-                id: req.body,
-                product: req.body,
-                price: req.body,
-                quantity: req.body,
-                id: idCount++
+            console.log(req.body)
+        //cartItems.push({
+               // id: req.body,
+                //product: req.body,
+                //price: req.body,
+                //quantity: req.body,
+                //id: idCount++
     });
-            res.send(cartItems);
-});
+            //res.send(cartItems);
+//});
     
         cart.put("/cart-items/:id", (req, res) => {
-        let count = 0;
+        //let count = 0;
         console.log(req.params.id);
         console.log(req.body);
-        for (let cart of cartItems) {
-            if (cart.id == req.params.id) {
-                let updatedCartItems = {
-                    id: req.body,
-                    product: req.body,
-                    price: req.body,
-                    quantity: req.body,
-                    id: Number(req.params.id)
+       // for (let cart of cartItems) {
+         //   if (cart.id == req.params.id) {
+           //     let updatedCartItems = {
+             //       id: req.body,
+               //     product: req.body,
+                 //   price: req.body,
+                   // quantity: req.body,
+                    //id: Number(req.params.id)
                 }
-                cartItems.splice(count, 1, updatedCartItems);
-            }
-            count++;
-        }
-        res.send(cartItems);
-    });
+                //cartItems.splice(count, 1, updatedCartItems);
+            //}
+            //count++;
+        //}
+        //res.send(cartItems);
+    //}
+);
 
     cart.delete("/cart-items/:id", (req, res) => {
-        
-        let count = 0;
-        for (let cart of cartItems) {
-            if (cartItems.id == req.params.id) {
-                cartItems.splice(count, 1);
-            }
-            count++;
+        //console.log(req.body);
+        console.log(req.params.id);
+//        let count = 0;
+  //      for (let cart of cartItems) {
+    //        if (cartItems.id == req.params.id) {
+      //          cartItems.splice(count, 1);
+        //    }
+          //  count++;
         }
-        res.send(cartItems);
-    });
+        //res.send(cartItems);}
+    );
 
     module.exports = cart;

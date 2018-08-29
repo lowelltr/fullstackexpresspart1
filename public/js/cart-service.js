@@ -1,7 +1,7 @@
 "use strict";
 function CartService($http) {
   const vm = this;
-  vm.get = () => {
+  vm.getAllItems = () => {
     return $http({
       url: "/cart-items",
       method: "GET"
