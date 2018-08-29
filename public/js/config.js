@@ -4,6 +4,6 @@ angular
   .config(($routeProvider) => {
     $routeProvider
       .when("/cart",{
-          template:`<components></components>`
+          template:`<shopping-cart></shopping-cart>`
       });
     });
