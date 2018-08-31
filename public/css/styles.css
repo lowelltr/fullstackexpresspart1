@@ -1,3 +1,21 @@
 body{
     background: aqua;
 }
+section{
+   
+    width: 200px;
+    height: 100%;
+    background: white;
+    border-radius: 5px solid black;
+    margin: 10px;
+}
+form{
+    display: flex;
+    justify-content: center;
+
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
