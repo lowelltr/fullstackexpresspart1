@@ -11,9 +11,13 @@ function CartService($http) {
     });
   };
     vm.addItem = (newItem) => {
+      console.log(newItem);
     return $http({
       url: "/cart-items",
       method: "Post",
+      data: {product: newItem.product,
+             price: newItem.price,
+             quantity: newItem.quantity }
     }).then((response) => {
       vm.cart = response.data;
       return vm.cart;

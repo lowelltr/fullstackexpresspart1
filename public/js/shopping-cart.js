@@ -1,6 +1,7 @@
 "use strict";
 const shoppingCart = {
   template: `
+    <h1>Grocery Cart</h1>
 
   <form ng-submit="$ctrl.addItem($ctrl.newItem);">
 
@@ -14,7 +15,7 @@ const shoppingCart = {
   </form>
   <div>
   <section ng-repeat="cart in $ctrl.cartItems">
-              <p>Product: {{ cart.id }}</p>
+              <p>Product: {{ cart.product }}</p>
               <p>Price: {{ cart.price }}</p>
               <p>Quantity: {{ cart.quantity }}</p>
               <button ng-click="$ctrl.removeItem(cart.id);">X</button>
