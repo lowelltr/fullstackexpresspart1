@@ -11,7 +11,7 @@ const shoppingCart = {
 
   <input type="text" placeholder="Quantity" ng-model="$ctrl.newItem.quantity">
 
-  <button>Submit</button>
+  <button id="submit">Submit</button>
   </form>
   <div>
   <section ng-repeat="cart in $ctrl.cartItems">
